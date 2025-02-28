@@ -4,6 +4,7 @@ from models import db
 import config
 import routes
 
+
 app = Flask(__name__)
 app.config.from_object(config)
 
@@ -13,6 +14,7 @@ CORS(app)
 app.register_blueprint(routes.bp)
 
 if __name__ == "__main__":
+    print("ahoj")
     with app.app_context():
         db.create_all()
     app.run(debug=True)
